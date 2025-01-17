@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap");
+
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -8,36 +9,38 @@ body {
   margin: 0;
   background: var(--background-gradient);
   color: var(--text-color);
+  overflow: hidden;
 }
 
 h1,
 h2 {
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primary-color);
   animation: fadeIn 1.5s ease-in-out;
 }
 
-div {
+.container {
   background: var(--background-color);
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
 }
 
-div:hover {
+.container:hover {
   transform: scale(1.05);
 }
 
+/* Button Styling */
 button {
-  margin-top: 20px;
-  padding: 20px 20px;
-  font-size: 18px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
   background: var(--primary-color);
   border: none;
@@ -51,22 +54,18 @@ button:hover {
   transform: translateY(-2px);
 }
 
-h2 {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  animation: slideIn 1s ease-in-out;
-}
-
+/* Theme Toggle Button Styling */
 .theme-toggle {
   margin-top: 10px;
-  margin-left: 15px;
-  padding: 10px 10px;
-  font-size: 20px;
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
   color: white;
   background: var(--secondary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .theme-toggle:hover {
@@ -74,6 +73,80 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* Loader Styling */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #ff6f61;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.category-selector {
+  margin-bottom: 20px;
+}
+
+.category-selector label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.category-selector select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Save Favorite Button Styling */
+.save-favorite {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.save-favorite:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* Share Buttons Styling */
+.share-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Favorite Jokes Styling */
+.favorite-jokes {
+  margin-top: 30px;
+}
+
+.favorite-jokes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-jokes li {
+  background: var(--background-color);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes and Animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -94,6 +167,15 @@ h2 {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   --background-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   --background-color: white;
@@ -105,29 +187,25 @@ h2 {
 
 .App.dark {
   --background-gradient: linear-gradient(135deg, #2c3e50, #4ca1af);
-  --background-color: #2c3e50;
+  --background-color: #1bcfb7;
   --text-color: #f5f7fa;
-  --primary-color: #3498db;
+  --primary-color: #0b1216;
   --hover-color: #2980b9;
   --secondary-color: #444;
 }
-
-.loader {
-  border: 4px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 4px solid #ff6f61;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto;
-  margin-top: 20px;
+.delete-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+  background: #ff3b30;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.delete-button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
 }
