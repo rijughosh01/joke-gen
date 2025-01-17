@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Joke Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Joke Generator! This React application fetches random jokes from an API, allows users to save their favorite jokes, share jokes on social media, switch between dark and light themes, and select different joke categories.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+**Random Joke Fetching**: Fetch random jokes from an external API.
+**Favorite Jokes**: Save and delete your favorite jokes.
+**Dark Mode**: Toggle between dark and light themes.
+**Joke Categories**: Select different categories of jokes (e.g., programming, general).
+**Social Media Sharing**: Share jokes on Facebook and Twitter.
+**Accessibility**: Improved accessibility with ARIA labels, keyboard navigation, and color contrast adjustments.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Redux-React
+- Redux
+- React-Share
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Make sure you have the following installed on your system:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js
+- npm (Node Package Manager)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   https://github.com/rijughosh01/joke-generator
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   cd joke-generator
 
-### `npm run eject`
+2. **Install Dependencies**:
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**To start the development server, run**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usage
 
-## Learn More
+**Fetch Jokes**: Click the "Fetch a new joke" button to get a random joke.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Save Favorite Jokes**: Click the "Save as Favorite" button to save the current joke to your favorites.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Delete Favorite Jokes**: Click the "Delete" button next to a favorite joke to remove it from the list.
 
-### Code Splitting
+**Toggle Dark Mode**: Click the "Switch to Light/Dark Mode" button to toggle between themes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Select Categories**: Use the dropdown to select different categories of jokes.
 
-### Analyzing the Bundle Size
+**Share Jokes**: Use the social media buttons to share jokes on Facebook and Twitter.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Contact
 
-### Advanced Configuration
+For any inquiries or feedback, please contact pg4009355@gmail.com.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy generating jokes! 😊
